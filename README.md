@@ -1,8 +1,7 @@
 # Brian Edem Bassey
 
 ## ![Profile](https://github.com/BrianBassey37/brianbassey37.github.io/assets/106796597/86dc5642-dd8f-4d46-a0d8-10bed1b3fed8)
-                                                         About Me
-I am a passionate and results-driven professional Data Analyst and a Software Engineer with a background in Electrical Electronics Engineering. 
+About Me: I am a passionate and results-driven professional Data Analyst and a Software Engineer with a background in Electrical Electronics Engineering. 
 I love solving complex data and algorithmic problems and have extensive experience at high-growth startups.
 
 ## 🚀 Skills
