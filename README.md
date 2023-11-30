@@ -37,4 +37,6 @@ Feel free to reach out to me:
 Connect with me on LinkedIn 🤝 https://www.linkedin.com/in/brianbassey/ for professional networking and collaboration.
 
 ## 📚 Learning and Growth
+https://drive.google.com/drive/folders/1ZuJ-PwI--Ylocsg6kPLGcf_F_7oWciFk
+https://sgq.io/0dzrSRR
 I am constantly learning and exploring new technologies. Stay tuned for more exciting projects!
