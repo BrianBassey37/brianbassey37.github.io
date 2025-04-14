@@ -69,130 +69,186 @@
       </div>
 
     </section><!-- /Hero Section -->
-
-    <!-- About Section -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>About & Skills</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .container {
+          max-width: 1200px;
+          margin: 40px auto;
+          padding: 0 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+    
+        .card {
+          background: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          flex: 1;
+          min-width: 300px;
+          padding: 25px;
+        }
+    
+        .card-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+    
+        .skill {
+          display: flex;
+          justify-content: space-between;
+          font-weight: bold;
+          margin-bottom: 5px;
+        }
+    
+        .progress {
+          margin-bottom: 15px;
+        }
+    
+        .progress-bar-wrap {
+          background: #eee;
+          height: 10px;
+          border-radius: 5px;
+          overflow: hidden;
+        }
+    
+        .progress-bar {
+          height: 10px;
+          border-radius: 5px;
+          transition: width 1.2s ease-in-out;
+        }
+    
+        .tech-skill {
+          background-color: #007bff;
+        }
+    
+        .soft-skill {
+          background-color: #fd7e14;
+        }
+      </style>
+    </head>
+    <body>
+    
     <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-md-6">
-
-          
-
-            <div class="skills-content skills-animation">
-
-              <h5>Technical Skills</h5>
-
-              <div class="progress">
-                <span class="skill"><span>Python, SQL</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>HTML, CSS, JavaScript, CMS</span> <i class="val">70%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>AWS, Azure, PostgreSQL</span> <i class="val">85%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Excel, Jupyter Notebooks, Git, Microsoft PowerPoint</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Machine Learning, Deep Learning, NLP</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              
-              <!-- Soft Skills -->
-
-              <div class="progress">
-                <span class="skill"><span>Communication</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Critical Thinking</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              
-              <div class="progress">
-                <span class="skill"><span>Problem Solving</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-              
-              <div class="progress">
-                <span class="skill"><span>Team Collaboration</span> <i class="val">95%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"><span>Time Management</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->    
-              
-              <div class="progress">
-                <span class="skill"><span>Adaptability</span> <i class="val">90%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div><!-- End Skills Item -->
+      <div class="container">
+    
+        <!-- Skills Card -->
+        <div class="card">
+          <h4 class="card-title">🛠️ Skills</h4>
+    
+          <h5 style="margin-top: 20px;">🔧 Technical Skills</h5>
+    
+          <div class="progress">
+            <div class="skill">Python, SQL <span class="val" data-value="95">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar tech-skill" style="width: 0%;"></div>
             </div>
           </div>
-
-          <div class="col-md-6">
-            <div class="about-me">
-              <h4>About me</h4>
-              <p>
-                A world-class Data Scientist with over 8 years of experience driving value through data analysis, predictive modeling, and advanced analytics across healthcare, education, and fitness industries. Expert in Python, SQL, Spark, Tableau, Power BI, Excel, and cloud platforms such as AWS and Azure, with deep proficiency in machine learning, deep learning, A/B testing, time series forecasting, natural language processing (NLP), and computer vision.
-
-              </p>
-              <p>
-                Recognized for architecting scalable data pipelines, optimizing ETL processes, and delivering real-time dashboards that enable informed decision-making and boost operational efficiency. Adept at collaborating with cross-functional teams, translating complex data into compelling narratives, and communicating insights to both technical and non-technical stakeholders.
-
-
-              </p>
-              <p>
-               
-                A strategic thinker and proven leader, experienced in mentoring aspiring data professionals, leading data science teams, and driving innovation through continuous learning. Passionate about contributing to forward-thinking organizations that leverage data to solve real-world challenges and create meaningful impact.
-              </p>
+    
+          <div class="progress">
+            <div class="skill">HTML, CSS, JavaScript, CMS <span class="val" data-value="70">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar tech-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">AWS, Azure, PostgreSQL <span class="val" data-value="85">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar tech-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">Excel, Jupyter, Git, PowerPoint <span class="val" data-value="95">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar tech-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">ML, DL, NLP <span class="val" data-value="95">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar tech-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <h5 style="margin-top: 30px;">💡 Soft Skills</h5>
+    
+          <div class="progress">
+            <div class="skill">Communication <span class="val" data-value="95">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar soft-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">Critical Thinking <span class="val" data-value="90">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar soft-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">Problem Solving <span class="val" data-value="90">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar soft-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">Team Collaboration <span class="val" data-value="95">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar soft-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">Time Management <span class="val" data-value="90">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar soft-skill" style="width: 0%;"></div>
+            </div>
+          </div>
+    
+          <div class="progress">
+            <div class="skill">Adaptability <span class="val" data-value="90">0%</span></div>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar soft-skill" style="width: 0%;"></div>
             </div>
           </div>
         </div>
-
+    
+        <!-- About Me Card -->
+        <div class="card">
+          <h4 class="card-title">👤 About Me</h4>
+          <p>
+            A world-class Data Scientist with over 8 years of experience driving value through data analysis, predictive modeling, and advanced analytics across healthcare, education, and fitness industries.
+            Expert in Python, SQL, Spark, Tableau, Power BI, Excel, and cloud platforms such as AWS and Azure.
+          </p>
+          <p>
+            Recognized for architecting scalable data pipelines, optimizing ETL processes, and delivering real-time dashboards that enable informed decision-making and boost operational efficiency.
+            Adept at collaborating with cross-functional teams, translating complex data into compelling narratives, and communicating insights to both technical and non-technical stakeholders.
+          </p>
+          <p>
+            A strategic thinker and proven leader, experienced in mentoring aspiring data professionals, leading data science teams, and driving innovation through continuous learning.
+            Passionate about contributing to forward-thinking organizations that leverage data to solve real-world challenges and create meaningful impact.
+          </p>
+        </div>
+    
       </div>
-
-
-
-
-    </section><!-- /About Section -->
-
-
+    </section>
     
     <section id="resume" class="resume section">
       <style>
@@ -217,7 +273,6 @@
     
       <div class="container section-title" data-aos="fade-up">
         <h2 class="resume">Resume</h2>
-        <p>Here’s an overview of my professional experience, education, and certifications.</p>
       </div>
     
       <div class="container">
@@ -330,29 +385,24 @@
         card.classList.toggle('active');
       }
     </script>
-    
-
-  
-
-
-
+   
 
     <!-- Stats Section -->
 <section id="stats" class="stats section accent-background">
-  <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+  <img src="assets/img/bassey2.jpg" alt="" data-aos="fade-in">
   <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
     <div class="row gy-4">
 
       <div class="col-lg-3 col-md-6">
         <div class="stats-item text-center w-100 h-100">
-          <span class="counter" data-target="635">0</span>
+          <span class="counter" data-target="635" data-start="629">0</span>
           <p>Total Number of Clients</p>
         </div>
       </div>
 
       <div class="col-lg-3 col-md-6">
         <div class="stats-item text-center w-100 h-100">
-          <span class="counter" data-target="1025">0</span>
+          <span class="counter" data-target="1025" data-start="1000">0</span>
           <p>Projects</p>
         </div>
       </div>
@@ -413,12 +463,10 @@
 
 
     
-
-   <!-- Testimonials Section -->
+<!-- Testimonials Section -->
 <section id="testimonials" class="testimonials section accent-background">
   <style>
     .testimonials {
-      position: relative;
       padding: 60px 0;
     }
 
@@ -426,20 +474,28 @@
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: 0.3s;
-      cursor: pointer;
-      position: relative;
       padding: 20px;
       margin-bottom: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .testimonial-card img {
-      width: 70px;
-      height: 70px;
+    .testimonial-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 15px;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .testimonial-info {
+      flex: 1;
     }
 
     .testimonial-name {
@@ -473,6 +529,18 @@
     .quote-icon-right {
       color: #ccc;
     }
+
+    @media (max-width: 576px) {
+      .testimonial-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .testimonial-img {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
   </style>
 
   <script>
@@ -492,10 +560,14 @@
       <!-- Testimonial Card 1 -->
       <div class="col-md-6 col-lg-4">
         <div class="testimonial-card">
-          <img src="assets/img/testimonials/gloria.jpg" alt="Gloria">
-          <div class="testimonial-name">Gloria Chidimma Idemoh</div>
-          <div class="testimonial-role">Researcher | Data Analyst | Editor-in-Chief, Patuch Concepts</div>
-          <div class="stars">★★★★★</div>
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/gloria.jpg" alt="Gloria" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Gloria Idemoh</div>
+              <div class="testimonial-role">Gloria Idemoh,  |Researcher | Data Analyst | Editor-in-Chief, Patuch Concepts</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
           <div class="testimonial-text">
             <i class="bi bi-quote quote-icon-left"></i>
             Brian’s resilience and unwavering commitment to impactful research inspired me deeply. His ability to simplify complex ideas into actionable strategies is a rare gift. Watching him lead with empathy and unmatched intellect has been a privilege.
@@ -507,10 +579,14 @@
       <!-- Testimonial Card 2 -->
       <div class="col-md-6 col-lg-4">
         <div class="testimonial-card">
-          <img src="assets/img/testimonials/drakwa.jpg" alt="Dr Akwaowo">
-          <div class="testimonial-name">Dr. Christie Akwaowo</div>
-          <div class="testimonial-role">Director, Institute of Health Research & Development</div>
-          <div class="stars">★★★★★</div>
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/drakwa.jpg" alt="Dr Akwaowo" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Dr. Christie Akwaowo</div>
+              <div class="testimonial-role">Dr. Christie Akwaowo | Director, Institute of Health Research & Development</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
           <div class="testimonial-text">
             <i class="bi bi-quote quote-icon-left"></i>
             Brian’s analytical brilliance was pivotal in our health projects. He doesn’t just crunch numbers — he brings them to life with insight and clarity. His humility and patience make him a joy to work with, and a leader to emulate.
@@ -522,10 +598,13 @@
       <!-- Testimonial Card 3 -->
       <div class="col-md-6 col-lg-4">
         <div class="testimonial-card">
-          <img src="assets/img/testimonials/prof.jpg" alt="Prof Uzoka">
-          <div class="testimonial-name">Professor Michael Uzoka</div>
-          <div class="testimonial-role">PhD (Computer Science), MBA</div>
-          <div class="stars">★★★★★</div>
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/prof.jpg" alt="Prof Uzoka" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-role">Professor Faith-Michael Uzoka  | University Professor, Mount Royal University </div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
           <div class="testimonial-text">
             <i class="bi bi-quote quote-icon-left"></i>
             Working with Brian is like watching art meet science. His mastery of data science is impressive, but it’s his creativity and heart that set him apart. He raised the bar for our team and reminded us of the human side of technology.
@@ -537,10 +616,14 @@
       <!-- Testimonial Card 4 -->
       <div class="col-md-6 col-lg-4">
         <div class="testimonial-card">
-          <img src="assets/img/testimonials/victoryekpin.jpg" alt="Victory Ekpin">
-          <div class="testimonial-name">Victory Ekpin</div>
-          <div class="testimonial-role">Public Health Professional | Commonwealth Scholar</div>
-          <div class="stars">★★★★★</div>
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/victoryekpin.jpg" alt="Victory Ekpin" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Victory Ekpin</div>
+              <div class="testimonial-role">Victory Ekpin | Public Health Professional | Commonwealth Scholar</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
           <div class="testimonial-text">
             <i class="bi bi-quote quote-icon-left"></i>
             Brian’s work ethic is phenomenal. His insights into public health data have helped shape real policy conversations. What’s more touching is his authenticity — he listens, he uplifts, and he delivers. I’m honored to have worked with him.
@@ -548,7 +631,26 @@
           </div>
         </div>
       </div>
+      <!-- Testimonial Card 5 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/emmaUrueye.jpeg" alt="Emmanuel Urueye" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Emmanuel Urueye</div>
+              <div class="testimonial-role"> 
+                Emmanuel Urueye |Supply chain Specialist</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            I would highly recommend Brian as a talented and dedicated professional. His impressive skills and expertise truly set him apart from others in his field. I have had the pleasure of working with him on multiple projects and have consistently been impressed by his attention to detail and creativity. He is a true asset to any team and would make an excellent addition to any organization.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
+        </div>
 
+        
     </div>
   </div>
 </section>
@@ -749,50 +851,30 @@
           alert("Email failed to send.");
         });
     });
+
   </script>
-
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const counters = document.querySelectorAll('.counter');
-  
-      function animateCounter(counter) {
-        const target = +counter.getAttribute('data-target');
-        const start = +counter.getAttribute('data-start') || 0;
-        const range = target - start;
-        const duration = 1000; // total animation time in ms
-        const stepTime = Math.max(Math.floor(duration / range), 20);
-        let count = start;
-  
-        const update = () => {
-          count++;
-          counter.textContent = count.toLocaleString(); // adds commas if needed
-          if (count < target) {
-            setTimeout(update, stepTime);
-          } else {
-            counter.textContent = target.toLocaleString();
-          }
-        };
-  
-        counter.textContent = start.toLocaleString();
-        update();
-      }
-  
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            // Uncomment if you want it to run only once
-            // observer.unobserve(entry.target);
-          }
+      window.addEventListener('DOMContentLoaded', () => {
+        const bars = document.querySelectorAll('.progress-bar');
+        const vals = document.querySelectorAll('.val');
+    
+        vals.forEach((valEl, idx) => {
+          const value = parseInt(valEl.getAttribute('data-value'));
+          let count = 0;
+          const interval = setInterval(() => {
+            if (count >= value) {
+              clearInterval(interval);
+            } else {
+              count++;
+              valEl.textContent = count + '%';
+            }
+          }, 15);
+    
+          bars[idx].style.width = value + '%';
         });
-      }, { threshold: 0.5 });
-  
-      counters.forEach(counter => observer.observe(counter));
-    });
-  </script>  
-
-
-
+      });
+  </script>
+    
 </body>
 
 </html>
