@@ -318,45 +318,42 @@
 
 
     <!-- Stats Section -->
-    <section id="stats" class="stats section accent-background">
+<section id="stats" class="stats section accent-background">
+  <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+  <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+    <div class="row gy-4">
 
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="635" data-purecounter-duration="0" class="purecounter">635</span>
-              <p>Total Number of Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1,025" data-purecounter-duration="0" class="purecounter">1,025</span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="49,560" data-purecounter-duration="0" class="purecounter">49,560</span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="0" class="purecounter">6</span>
-              <p>Organisations worked with</p>
-            </div>
-          </div>
-
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="635">0</span>
+          <p>Total Number of Clients</p>
         </div>
-
       </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="1025">0</span>
+          <p>Projects</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="49560">0</span>
+          <p>Hours Of Support</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="6">0</span>
+          <p>Organisations Worked With</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     </section>
 <!-- Pricing Section -->
@@ -651,38 +648,48 @@
 
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const progressBars = document.querySelectorAll(".progress");
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const progressBars = document.querySelectorAll(".progress");
+  
+        // Observer to detect when an element is in the viewport
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const progress = entry.target;
+                    const bar = progress.querySelector(".progress-bar");
+                    const percentageText = progress.querySelector(".val");
+  
+                    let width = 0;
+                    const finalWidth = parseInt(bar.getAttribute("aria-valuenow"), 10);
+  
+                    // Reset values before animation
+                    bar.style.width = "0%";
+                    percentageText.innerText = "0%";
+  
+                    const interval = setInterval(() => {
+                        if (width >= finalWidth) {
+                            clearInterval(interval);
+                        } else {
+                            width++;
+                            bar.style.width = width + "%";
+                            percentageText.innerText = width + "%";
+                        }
+                    }, 20); // Animation speed
+  
+                }
+            });
+        }, { threshold: 0.3 }); // Trigger when 30% of the element is visible
+  
+        // Observe each progress bar container
+        progressBars.forEach((progress) => {
+            observer.observe(progress);
+        });
+    });
+  </script>
+  
 
-      progressBars.forEach((progress) => {
-          let bar = progress.querySelector(".progress-bar");
-          let percentageText = progress.querySelector(".val");
-          
-          let width = 0;
-          let finalWidth = parseInt(bar.getAttribute("aria-valuenow"), 10); // Target percentage
-
-          // Reset progress bar and text to 0
-          bar.style.width = "0%";
-          percentageText.innerText = "0%";
-
-          let interval = setInterval(() => {
-              if (width >= finalWidth) {
-                  clearInterval(interval); // Stop animation when target is reached
-              } else {
-                  width++;
-                  bar.style.width = width + "%"; // Animate progress bar
-                  percentageText.innerText = width + "%"; // Update percentage number
-              }
-          }, 50); // Adjust speed of animation (lower = faster)
-      });
-  });
-
-
-</script>
-
-
-
+  </script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function(){
@@ -702,7 +709,46 @@
     });
   </script>
 
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const counters = document.querySelectorAll('.counter');
+  
+      function animateCounter(counter) {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2000; // total animation time in ms
+        const stepTime = Math.max(Math.floor(duration / target), 20);
+        let count = 0;
+  
+        const update = () => {
+          count++;
+          counter.textContent = count.toLocaleString(); // adds commas if needed
+          if (count < target) {
+            setTimeout(update, stepTime);
+          } else {
+            counter.textContent = target.toLocaleString();
+          }
+        };
+  
+        // Reset before reanimating
+        counter.textContent = "0";
+        update();
+      }
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            animateCounter(counter);
+            // Uncomment this to stop animation after first run
+            // observer.unobserve(counter);
+          }
+        });
+      }, { threshold: 0.5 });
+  
+      counters.forEach(counter => observer.observe(counter));
+    });
+  </script>
+  
 
 
 
