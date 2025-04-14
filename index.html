@@ -190,10 +190,7 @@
 
 
 
-    </section><!-- /About Section -->
-
-
-    
+    </section><!-- /About Section -->   
     <!-- Resume Section -->
     <section id="resume" class="resume section">
 
@@ -317,48 +314,44 @@
 
 
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section accent-background">
+   <!-- Stats Section -->
+  <section id="stats" class="stats section accent-background">
+    <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
 
-      <img src="assets/img/stats-bg.jpg" alt="" data-aos="fade-in">
-
-      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="0" class="purecounter">232</span>
-              <p>Clients</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="0" class="purecounter">521</span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="0" class="purecounter">1453</span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="0" class="purecounter">32</span>
-              <p>Awards</p>
-            </div>
-          </div>
-
+        <div class="col-lg-3 col-md-6">
+         <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="635">0</span>
+          <p>Total Number of Clients</p>
         </div>
-
       </div>
 
-    </section>
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="1025">0</span>
+          <p>Projects</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="49560">0</span>
+          <p>Hours Of Support</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="stats-item text-center w-100 h-100">
+          <span class="counter" data-target="6">0</span>
+          <p>Organisations Worked With</p>
+        </div>
+      </div>
+
+    </div>
+   </div>
+  </section>
+
 <!-- Pricing Section -->
 <section id="pricing" class="pricing section">
 
@@ -395,122 +388,179 @@
 
 
     
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section accent-background">
+  <style>
+    .testimonials {
+      padding: 60px 0;
+    }
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section accent-background">
+    .testimonial-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
 
-      <img src="assets/img/bassey.jpg" class="testimonials-bg" alt="">
+    .testimonial-content {
+      display: flex;
+      align-items: center;
+    }
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
+    .testimonial-info {
+      flex: 1;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/gloria.jpg" class="testimonial-img" alt="">
-                <h3>Gloria Chidimma Idemoh</h3>
-                <h4>Researcher | Data Analyst | Editor-in-Chief Patuch Concepts</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian's commitment to sustainability and research excellence shines through in all his work. He is a true leader and a role model in the field."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .testimonial-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/drakwa.jpg" class="testimonial-img" alt="">
-                <h3>Dr. Christie Akwaowo</h3>
-                <h4>Director, Institute of Health Research and Development, University of Uyo Teaching Hospital</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span> "Leading public health advocate and Deputy CMAC, Training and Research. Brian's ability to analyze and interpret data is remarkable and has greatly contributed to our research efforts."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .testimonial-role {
+      font-size: 0.95rem;
+      color: #555;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/prof.jpg" class="testimonial-img" alt="">
-                <h3>Professor Michael Uzoka</h3>
-                <h4>PhD (Computer Science), MBA, MS (Computer Science)</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian's expertise in data science and his innovative approach to problem-solving have been invaluable. His work has set new standards in our projects."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .stars {
+      color: gold;
+      margin: 10px 0;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets\img\testimonials\victoryekpin.jpg" class="testimonial-img" alt="">
-                <h3>Victory Ekpin</h3>
-                <h4>Public Health Professional | Commonwealth Scholar</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian consistently delivers high-quality work while demonstrating a deep understanding of complex health systems. His contributions have had a profound impact."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .testimonial-text {
+      display: none;
+      font-style: italic;
+      color: #333;
+      margin-top: 10px;
+    }
 
+    .testimonial-card.active .testimonial-text {
+      display: block;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/gloria.jpg" class="testimonial-img" alt="">
-                <h3>Gloria Chidimma Idemoh</h3>
-                <h4>>Researcher | Data Analyst | Editor-in-Chief Patuch Concepts</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian's commitment to sustainability and research excellence shines through in all his work. He is a true leader and a role model in the field."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .quote-icon-left,
+    .quote-icon-right {
+      color: #ccc;
+    }
 
-           
+    @media (max-width: 576px) {
+      .testimonial-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
+      .testimonial-img {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".testimonial-card");
+      cards.forEach(card => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
+
+      <!-- Testimonial Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/gloria.jpg" alt="Gloria" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Gloria Chidimma Idemoh</div>
+              <div class="testimonial-role">Researcher | Data Analyst | Editor-in-Chief, Patuch Concepts</div>
+              <div class="stars">★★★★★</div>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Brian’s resilience and unwavering commitment to impactful research inspired me deeply. His ability to simplify complex ideas into actionable strategies is a rare gift. Watching him lead with empathy and unmatched intellect has been a privilege.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
         </div>
-
       </div>
 
-    </section><!-- /Testimonials Section -->
+      <!-- Testimonial Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/drakwa.jpg" alt="Dr Akwaowo" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Dr. Christie Akwaowo</div>
+              <div class="testimonial-role">Director, Institute of Health Research & Development</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Brian’s analytical brilliance was pivotal in our health projects. He doesn’t just crunch numbers — he brings them to life with insight and clarity. His humility and patience make him a joy to work with, and a leader to emulate.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/prof.jpg" alt="Prof Uzoka" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Professor Michael Uzoka</div>
+              <div class="testimonial-role">PhD (Computer Science), MBA</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Working with Brian is like watching art meet science. His mastery of data science is impressive, but it’s his creativity and heart that set him apart. He raised the bar for our team and reminded us of the human side of technology.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial Card 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <img src="assets/img/testimonials/victoryekpin.jpg" alt="Victory Ekpin" class="testimonial-img">
+            <div class="testimonial-info">
+              <div class="testimonial-name">Victory Ekpin</div>
+              <div class="testimonial-role">Public Health Professional | Commonwealth Scholar</div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Brian’s work ethic is phenomenal. His insights into public health data have helped shape real policy conversations. What’s more touching is his authenticity — he listens, he uplifts, and he delivers. I’m honored to have worked with him.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 
@@ -680,7 +730,45 @@
 
 
 </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll('.counter');
 
+    function animateCounter(counter) {
+      const target = +counter.getAttribute('data-target');
+      const duration = 2000; // total animation time in ms
+      const stepTime = Math.max(Math.floor(duration / target), 20);
+      let count = 0;
+
+      const update = () => {
+        count++;
+        counter.textContent = count.toLocaleString(); // adds commas if needed
+        if (count < target) {
+          setTimeout(update, stepTime);
+        } else {
+          counter.textContent = target.toLocaleString();
+        }
+      };
+
+      // Reset before reanimating
+      counter.textContent = "0";
+      update();
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counter = entry.target;
+          animateCounter(counter);
+          // Uncomment this to stop animation after first run
+          // observer.unobserve(counter);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+  });
+</script>
 
 
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
