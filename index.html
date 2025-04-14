@@ -194,123 +194,143 @@
 
 
     
-    <!-- Resume Section -->
     <section id="resume" class="resume section">
-
-      <!-- Section Title -->
-       <style>
-          .resume{
-            margin-top: -50px;
-          }
-       </style>
+      <style>
+        .resume {
+          margin-top: -50px;
+        }
+        .card {
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+        }
+        .card:hover {
+          box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .card-details {
+          display: none;
+          margin-top: 10px;
+        }
+        .card.active .card-details {
+          display: block;
+        }
+      </style>
+    
       <div class="container section-title" data-aos="fade-up">
         <h2 class="resume">Resume</h2>
         <p>Here’s an overview of my professional experience, education, and certifications.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <!-- <h3 class="resume-title">Sumary</h3> -->
-
-            <!-- <div class="resume-item pb-0">
-              <h4>Brian Bassey</h4>
-              <p><em>A world-class Data Scientist with over 8 years of experience driving value through data analysis, predictive modeling, and advanced analytics across healthcare, education, and fitness industries. Expert in Python, R, SQL, Spark, Tableau, Power BI, Excel, and cloud platforms such as AWS and Azure, with deep proficiency in machine learning, deep learning, A/B testing, time series forecasting, natural language processing (NLP), and computer vision.</em></p>
-              <ul>
-                <li>Uyo, Nigeria</li>
-                <li>+44 7507 920218</li>
-                <li>brianbassey37@gmai.com</li>
-              </ul>
-            </div>Edn Resume Item -->
-
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Master of Computer Applications - MCA, Data Processing</h4>
-              <h5>ALX Academy | August 2023</h5>
-              <!-- <p><em>Rochester Institute of Technology, Rochester, NY</em></p> -->
-              <!-- <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p> -->
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>FMVA, BIDA, Business Intelligence  &amp; Data Analytics</h4>
-              <h5>Corporate Finance Institute® | June 2022</h5>
-              <!-- <p><em>Rochester Institute of Technology, Rochester, NY</em></p> -->
-              <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor of Engineering - Electrical &amp; Electronics Engineering</h4>
-              <h5>University of Uyo | October 2015</h5>
-              <!-- <p><em>Rochester Institute of Technology, Rochester, NY</em></p> -->
-              <!-- <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p> -->
-            </div><!-- Edn Resume Item -->
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Senior Data Analyst | Data Science Tutor</h4>
-              <h5>Titrans Technologies Ltd | September 2023 - Present </h5>
-              <p><em> Remote (United Kingdom) </em></p>
-              <ul>
-                <li>Performed EDA, trend analysis, and performance monitoring for business insights.</li>
-                <li>Trained 300+ students on Python, SQL, Tableau, and Power BI.</li>
-                <li>Developed competency-based curriculum, boosting job placements by 25%.</li>
-                <li>Analyzed educational outcomes for 4,000+ students.</li>
-                <li>Led curriculum design and cross-functional collaboration.</li>
-                <li>Re-engineered PostgreSQL schema to streamline integration.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <!-- <h3 class="resume-title">Professional Experience</h3> -->
-           
-            <div class="resume-item">
-              <h4>Senior Data Analyst | Web Development Specialist | Healthcare Analytics</h4>
-              <h5> May 2023 - Present </h5>
-              <p><em>Institute of Health Research and Development | Hybrid (Nigeria)</em></p>
-              <ul>
-                <li>Developed data-integrated website for research and publication.</li>
-                <li>Built secure database system for health research.</li>
-                <li>Provided predictive analytics to enhance medical research.</li>
-                <li>Collaborated with professionals to improve data-driven healthcare.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-
-            <div class="resume-item">
-              <h4>Prediction Modelling | Backend Development Lead</h4>
-              <h5>October 2022 - Present </h5>
-              <p><em> Febra Diagnostica | Remote (Canada)</em></p>
-              <ul>
-                <li>Led ML model development for febrile disease diagnosis.</li>
-                <li>Utilized TensorFlow and scikit-learn with 20k+ data points.</li>
-                <li>Partnered with clinicians for clinical accuracy.</li>
-                <li>Boosted diagnostic efficiency by 15%.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-
-            <div class="resume-item">
-              <h4>Business Data Analyst</h4>
-              <h5> September 2019 - August 2023 </h5>
-              <p><em>Akwa-Cross Sports Center | On-Site (Nigeria) </em></p>
-              <ul>
-                <li>Analyzed 11k+ records to boost member retention by 7%.</li>
-                <li>Created ML models for predicting at-risk members.</li>
-                <li>Redesigned reporting portal for real-time data.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-        </div>
-
       </div>
-
-    </section><!-- /Resume Section -->
-
+    
+      <div class="container">
+        <div class="row gy-4">
+    
+          <!-- Education Cards -->
+          <h3 class="resume-title">Education</h3>
+          
+          <div class="col-md-6">
+            <div class="card p-3" onclick="toggleCard(this)">
+              <h4>Master of Computer Applications - Data Processing</h4>
+              <h6>ALX Academy | August 2023</h6>
+              <div class="card-details">
+                <p><strong>Institution:</strong> ALX Academy</p>
+                <p><strong>Date:</strong> August 2023</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6">
+            <div class="card p-3" onclick="toggleCard(this)">
+              <h4>FMVA, BIDA - Business Intelligence & Data Analytics</h4>
+              <h6>Corporate Finance Institute | June 2022</h6>
+              <div class="card-details">
+                <p><strong>Institution:</strong> CFI®</p>
+                <p><strong>Date:</strong> June 2022</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6">
+            <div class="card p-3" onclick="toggleCard(this)">
+              <h4>Bachelor of Engineering - Electrical & Electronics Engineering</h4>
+              <h6>University of Uyo | October 2015</h6>
+              <div class="card-details">
+                <p><strong>Institution:</strong> University of Uyo</p>
+                <p><strong>Date:</strong> October 2015</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Professional Experience Cards -->
+          <h3 class="resume-title">Professional Experience</h3>
+    
+          <div class="col-md-6">
+            <div class="card p-3" onclick="toggleCard(this)">
+              <h4>Senior Data Analyst | Data Science Tutor</h4>
+              <h6>Titrans Technologies Ltd | Sept 2023 – Present</h6>
+              <div class="card-details">
+                <p><strong>Location:</strong> Remote (UK)</p>
+                <ul>
+                  <li>Performed EDA, trend analysis, and monitoring.</li>
+                  <li>Trained 300+ students on tools like Python, SQL, and Tableau.</li>
+                  <li>Improved curriculum outcomes by 25%.</li>
+                  <li>Led curriculum development and schema redesign.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6">
+            <div class="card p-3" onclick="toggleCard(this)">
+              <h4>Senior Data Analyst | Web Dev Specialist</h4>
+              <h6>Institute of Health Research and Development | May 2023 – Present</h6>
+              <div class="card-details">
+                <p><strong>Location:</strong> Hybrid (Nigeria)</p>
+                <ul>
+                  <li>Built data-integrated platforms and predictive analytics tools.</li>
+                  <li>Enhanced healthcare data delivery systems.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6">
+            <div class="card p-3" onclick="toggleCard(this)">
+              <h4>Prediction Modelling | Backend Dev Lead</h4>
+              <h6>Febra Diagnostica | Oct 2022 – Present</h6>
+              <div class="card-details">
+                <p><strong>Location:</strong> Remote (Canada)</p>
+                <ul>
+                  <li>Built ML models for febrile diagnosis using TensorFlow.</li>
+                  <li>Collaborated with clinicians and processed 20k+ data points.</li>
+                  <li>Improved diagnostics by 15%.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-6">
+            <div class="card p-3" onclick="toggleCard(this)">
+              <h4>Business Data Analyst</h4>
+              <h6>Akwa-Cross Sports Center | Sept 2019 – Aug 2023</h6>
+              <div class="card-details">
+                <p><strong>Location:</strong> On-site (Nigeria)</p>
+                <ul>
+                  <li>Analyzed 11k+ records to improve retention by 7%.</li>
+                  <li>Built ML models and redesigned data reporting systems.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      function toggleCard(card) {
+        card.classList.toggle('active');
+      }
+    </script>
+    
 
   
 
@@ -339,10 +359,11 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="stats-item text-center w-100 h-100">
-          <span class="counter" data-target="49560">0</span>
-          <p>Hours Of Support</p>
-        </div>
+         <span class="counter" data-target="49560" data-start="49550">0</span>
+         <p>Hours Of Support</p>
+       </div>
       </div>
+
 
       <div class="col-lg-3 col-md-6">
         <div class="stats-item text-center w-100 h-100">
@@ -393,123 +414,144 @@
 
     
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section accent-background">
+   <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section accent-background">
+  <style>
+    .testimonials {
+      position: relative;
+      padding: 60px 0;
+    }
 
-      <img src="assets/img/bassey.jpg" class="testimonials-bg" alt="">
+    .testimonial-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: 0.3s;
+      cursor: pointer;
+      position: relative;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    .testimonial-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
+    .testimonial-name {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/gloria.jpg" class="testimonial-img" alt="">
-                <h3>Gloria Chidimma Idemoh</h3>
-                <h4>Researcher | Data Analyst | Editor-in-Chief Patuch Concepts</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian's commitment to sustainability and research excellence shines through in all his work. He is a true leader and a role model in the field."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .testimonial-role {
+      font-size: 0.95rem;
+      color: #555;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/drakwa.jpg" class="testimonial-img" alt="">
-                <h3>Dr. Christie Akwaowo</h3>
-                <h4>Director, Institute of Health Research and Development, University of Uyo Teaching Hospital</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span> "Leading public health advocate and Deputy CMAC, Training and Research. Brian's ability to analyze and interpret data is remarkable and has greatly contributed to our research efforts."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .stars {
+      color: gold;
+      margin: 10px 0;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/prof.jpg" class="testimonial-img" alt="">
-                <h3>Professor Michael Uzoka</h3>
-                <h4>PhD (Computer Science), MBA, MS (Computer Science)</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian's expertise in data science and his innovative approach to problem-solving have been invaluable. His work has set new standards in our projects."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .testimonial-text {
+      display: none;
+      font-style: italic;
+      color: #333;
+      margin-top: 10px;
+    }
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets\img\testimonials\victoryekpin.jpg" class="testimonial-img" alt="">
-                <h3>Victory Ekpin</h3>
-                <h4>Public Health Professional | Commonwealth Scholar</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian consistently delivers high-quality work while demonstrating a deep understanding of complex health systems. His contributions have had a profound impact."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+    .testimonial-card.active .testimonial-text {
+      display: block;
+    }
 
+    .quote-icon-left,
+    .quote-icon-right {
+      color: #ccc;
+    }
+  </style>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/gloria.jpg" class="testimonial-img" alt="">
-                <h3>Gloria Chidimma Idemoh</h3>
-                <h4>>Researcher | Data Analyst | Editor-in-Chief Patuch Concepts</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>"Brian's commitment to sustainability and research excellence shines through in all his work. He is a true leader and a role model in the field."</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".testimonial-card");
+      cards.forEach(card => {
+        card.addEventListener("click", () => {
+          card.classList.toggle("active");
+        });
+      });
+    });
+  </script>
 
-           
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row">
 
+      <!-- Testimonial Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <img src="assets/img/testimonials/gloria.jpg" alt="Gloria">
+          <div class="testimonial-name">Gloria Chidimma Idemoh</div>
+          <div class="testimonial-role">Researcher | Data Analyst | Editor-in-Chief, Patuch Concepts</div>
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Brian’s resilience and unwavering commitment to impactful research inspired me deeply. His ability to simplify complex ideas into actionable strategies is a rare gift. Watching him lead with empathy and unmatched intellect has been a privilege.
+            <i class="bi bi-quote quote-icon-right"></i>
           </div>
-          <div class="swiper-pagination"></div>
         </div>
-
       </div>
 
-    </section><!-- /Testimonials Section -->
+      <!-- Testimonial Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <img src="assets/img/testimonials/drakwa.jpg" alt="Dr Akwaowo">
+          <div class="testimonial-name">Dr. Christie Akwaowo</div>
+          <div class="testimonial-role">Director, Institute of Health Research & Development</div>
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Brian’s analytical brilliance was pivotal in our health projects. He doesn’t just crunch numbers — he brings them to life with insight and clarity. His humility and patience make him a joy to work with, and a leader to emulate.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
+        </div>
+      </div>
 
+      <!-- Testimonial Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <img src="assets/img/testimonials/prof.jpg" alt="Prof Uzoka">
+          <div class="testimonial-name">Professor Michael Uzoka</div>
+          <div class="testimonial-role">PhD (Computer Science), MBA</div>
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Working with Brian is like watching art meet science. His mastery of data science is impressive, but it’s his creativity and heart that set him apart. He raised the bar for our team and reminded us of the human side of technology.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
+        </div>
+      </div>
 
+      <!-- Testimonial Card 4 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <img src="assets/img/testimonials/victoryekpin.jpg" alt="Victory Ekpin">
+          <div class="testimonial-name">Victory Ekpin</div>
+          <div class="testimonial-role">Public Health Professional | Commonwealth Scholar</div>
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-text">
+            <i class="bi bi-quote quote-icon-left"></i>
+            Brian’s work ethic is phenomenal. His insights into public health data have helped shape real policy conversations. What’s more touching is his authenticity — he listens, he uplifts, and he delivers. I’m honored to have worked with him.
+            <i class="bi bi-quote quote-icon-right"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     
     <!-- Contact Section -->
@@ -715,9 +757,11 @@
   
       function animateCounter(counter) {
         const target = +counter.getAttribute('data-target');
-        const duration = 2000; // total animation time in ms
-        const stepTime = Math.max(Math.floor(duration / target), 20);
-        let count = 0;
+        const start = +counter.getAttribute('data-start') || 0;
+        const range = target - start;
+        const duration = 1000; // total animation time in ms
+        const stepTime = Math.max(Math.floor(duration / range), 20);
+        let count = start;
   
         const update = () => {
           count++;
@@ -729,26 +773,23 @@
           }
         };
   
-        // Reset before reanimating
-        counter.textContent = "0";
+        counter.textContent = start.toLocaleString();
         update();
       }
   
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const counter = entry.target;
-            animateCounter(counter);
-            // Uncomment this to stop animation after first run
-            // observer.unobserve(counter);
+            animateCounter(entry.target);
+            // Uncomment if you want it to run only once
+            // observer.unobserve(entry.target);
           }
         });
       }, { threshold: 0.5 });
   
       counters.forEach(counter => observer.observe(counter));
     });
-  </script>
-  
+  </script>  
 
 
 
