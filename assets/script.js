@@ -2,6 +2,7 @@
 const LANG_COLORS = {
   "Python": "#3572A5",
   "JavaScript": "#f1e05a",
+  "TypeScript": "#3178c6",
   "C": "#555555",
   "Jupyter Notebook": "#DA5B0B",
   "HTML": "#e34c26",
@@ -14,35 +15,35 @@ function langColor(lang) {
   return LANG_COLORS[first] || "#39ff88";
 }
 
-// ---------- Data: 4 strongest, fully-owned (non-fork) repos from github.com/brianbassey37 ----------
+// ---------- Data: recent production work (private repos — no public source link) ----------
 const PROJECTS = [
   {
-    name: "glucose_predictor_app",
-    desc: "Machine learning app that predicts blood glucose levels from patient data, served through an interactive Streamlit interface.",
+    name: "NHCRIP",
+    desc: "National Haematology Clinical Research and Intelligence Platform — a clinical research system built for real haematology patient data.",
     lang: "Python",
-    tags: ["data"],
-    url: "https://github.com/brianbassey37/glucose_predictor_app"
+    tags: ["healthcare"],
+    private: true
   },
   {
-    name: "AirBnB_clone",
-    desc: "Console-driven AirBnB clone covering object-relational mapping, file storage, and core OOP design.",
-    lang: "Python",
+    name: "IHRDJ",
+    desc: "Institutional Research Repository — a Django REST API backend with a React/TypeScript frontend for managing institutional research records.",
+    lang: "TypeScript / Django",
     tags: ["web"],
-    url: "https://github.com/brianbassey37/AirBnB_clone"
+    private: true
   },
   {
-    name: "binary_trees",
-    desc: "Binary tree data structures and traversal algorithms implemented from first principles in C.",
-    lang: "C",
+    name: "novena-inventory",
+    desc: "Inventory management system for Novena Computers — Django REST API, a management frontend, and an offline-capable POS PWA.",
+    lang: "Python / Django",
     tags: ["systems"],
-    url: "https://github.com/brianbassey37/binary_trees"
+    private: true
   },
   {
-    name: "RSA-Factoring-Challenge",
-    desc: "A cryptography-focused challenge exploring RSA key factoring using Python and C.",
-    lang: "Python / C",
-    tags: ["algorithms"],
-    url: "https://github.com/brianbassey37/RSA-Factoring-Challenge"
+    name: "wash-performance-analysis",
+    desc: "Performance analysis of WASH (Water, Sanitation & Hygiene) indicators for operational-base primary healthcare centres in Akwa Ibom State, Nigeria.",
+    lang: "Jupyter Notebook",
+    tags: ["data"],
+    private: true
   }
 ];
 
@@ -72,7 +73,10 @@ grid.innerHTML = PROJECTS.map(p => `
     <h3>${p.name}</h3>
     <p>${p.desc}</p>
     <div class="project-links">
-      <a href="${p.url}" target="_blank" rel="noopener">view-source →</a>
+      ${p.private
+        ? `<span class="project-private">🔒 private repo</span><a href="mailto:brianbassey37@gmail.com?subject=${encodeURIComponent('Re: ' + p.name)}">ask me about it →</a>`
+        : `<a href="${p.url}" target="_blank" rel="noopener">view-source →</a>`
+      }
     </div>
   </article>
 `).join("");
