@@ -29,14 +29,16 @@ const PROJECTS = [
     desc: "Institutional Research Repository — a Django REST API backend with a React/TypeScript frontend for managing institutional research records.",
     lang: "TypeScript / Django",
     tags: ["web"],
-    private: true
+    private: true,
+    site: "https://journal.iihrd.org"
   },
   {
-    name: "novena-inventory",
-    desc: "Inventory management system for Novena Computers — Django REST API, a management frontend, and an offline-capable POS PWA.",
+    name: "Vedia",
+    desc: "A Django-based school management platform for primary schools — student records, fees, and academic administration.",
     lang: "Python / Django",
-    tags: ["systems"],
-    private: true
+    tags: ["education"],
+    private: true,
+    site: "https://www.schmgtapp.com"
   },
   {
     name: "wash-performance-analysis",
@@ -73,9 +75,12 @@ grid.innerHTML = PROJECTS.map(p => `
     <h3>${p.name}</h3>
     <p>${p.desc}</p>
     <div class="project-links">
-      ${p.private
-        ? `<span class="project-private">🔒 private repo</span><a href="mailto:brianbassey37@gmail.com?subject=${encodeURIComponent('Re: ' + p.name)}">ask me about it →</a>`
-        : `<a href="${p.url}" target="_blank" rel="noopener">view-source →</a>`
+      ${p.private ? `<span class="project-private">🔒 private repo</span>` : ""}
+      ${p.site
+        ? `<a href="${p.site}" target="_blank" rel="noopener">visit site →</a>`
+        : p.private
+          ? `<a href="mailto:brianbassey37@gmail.com?subject=${encodeURIComponent('Re: ' + p.name)}">ask me about it →</a>`
+          : `<a href="${p.url}" target="_blank" rel="noopener">view-source →</a>`
       }
     </div>
   </article>
