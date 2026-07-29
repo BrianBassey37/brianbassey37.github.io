@@ -1,4 +1,20 @@
-// ---------- Data: projects pulled from github.com/brianbassey37 ----------
+// ---------- GitHub's actual language colors ----------
+const LANG_COLORS = {
+  "Python": "#3572A5",
+  "JavaScript": "#f1e05a",
+  "C": "#555555",
+  "Jupyter Notebook": "#DA5B0B",
+  "HTML": "#e34c26",
+  "Shell": "#89e051",
+  "Django": "#0C4B33",
+  "Flask": "#3572A5"
+};
+function langColor(lang) {
+  const first = lang.split(" / ")[0].trim();
+  return LANG_COLORS[first] || "#39ff88";
+}
+
+// ---------- Data: 4 strongest, fully-owned (non-fork) repos from github.com/brianbassey37 ----------
 const PROJECTS = [
   {
     name: "glucose_predictor_app",
@@ -8,20 +24,6 @@ const PROJECTS = [
     url: "https://github.com/brianbassey37/glucose_predictor_app"
   },
   {
-    name: "SkyLearn",
-    desc: "Lightweight learning management system built on the Django web framework.",
-    lang: "Python / Django",
-    tags: ["web"],
-    url: "https://github.com/brianbassey37/SkyLearn"
-  },
-  {
-    name: "AirBnB_clone_v3",
-    desc: "Full RESTful API layer for an AirBnB clone, built with Flask and a custom storage engine.",
-    lang: "Python / Flask",
-    tags: ["web"],
-    url: "https://github.com/brianbassey37/AirBnB_clone_v3"
-  },
-  {
     name: "AirBnB_clone",
     desc: "Console-driven AirBnB clone covering object-relational mapping, file storage, and core OOP design.",
     lang: "Python",
@@ -29,32 +31,11 @@ const PROJECTS = [
     url: "https://github.com/brianbassey37/AirBnB_clone"
   },
   {
-    name: "simple_shell",
-    desc: "A custom UNIX command-line shell written from scratch in C, handling built-ins, piping, and process control.",
-    lang: "C",
-    tags: ["systems"],
-    url: "https://github.com/brianbassey37/simple_shell"
-  },
-  {
-    name: "monty",
-    desc: "A Monty bytecode interpreter implementing stack and queue-based instruction execution.",
-    lang: "C",
-    tags: ["systems"],
-    url: "https://github.com/brianbassey37/monty"
-  },
-  {
     name: "binary_trees",
-    desc: "Binary tree data structures and traversal algorithms implemented from first principles.",
+    desc: "Binary tree data structures and traversal algorithms implemented from first principles in C.",
     lang: "C",
-    tags: ["algorithms"],
+    tags: ["systems"],
     url: "https://github.com/brianbassey37/binary_trees"
-  },
-  {
-    name: "sorting_algorithms",
-    desc: "Classic sorting algorithms implemented in C with a focus on Big O time and space complexity.",
-    lang: "C",
-    tags: ["algorithms"],
-    url: "https://github.com/brianbassey37/sorting_algorithms"
   },
   {
     name: "RSA-Factoring-Challenge",
@@ -62,13 +43,6 @@ const PROJECTS = [
     lang: "Python / C",
     tags: ["algorithms"],
     url: "https://github.com/brianbassey37/RSA-Factoring-Challenge"
-  },
-  {
-    name: "Fix_My_Code_Challenge",
-    desc: "Debugging challenge fixing broken code across multiple languages — C, Python, and JavaScript.",
-    lang: "JavaScript / C / Python",
-    tags: ["algorithms"],
-    url: "https://github.com/brianbassey37/Fix_My_Code_Challenge"
   }
 ];
 
@@ -87,20 +61,18 @@ const SKILLS = [
   { name: "Data Structures", icon: "🧩", cat: "Fundamentals" }
 ];
 
-const ROLES = ["Data Analyst", "Software Engineer", "ML Enthusiast", "Problem Solver"];
-
 // ---------- Render projects ----------
 const grid = document.getElementById("projectsGrid");
 grid.innerHTML = PROJECTS.map(p => `
   <article class="project-card" data-tags="${p.tags.join(' ')}">
     <div class="project-top">
       <span class="project-tag">${p.tags[0]}</span>
-      <span class="project-lang"><span class="lang-dot"></span>${p.lang}</span>
+      <span class="project-lang"><span class="lang-dot" style="background:${langColor(p.lang)}"></span>${p.lang}</span>
     </div>
     <h3>${p.name}</h3>
     <p>${p.desc}</p>
     <div class="project-links">
-      <a href="${p.url}" target="_blank" rel="noopener">View on GitHub →</a>
+      <a href="${p.url}" target="_blank" rel="noopener">view-source →</a>
     </div>
   </article>
 `).join("");
@@ -114,46 +86,98 @@ document.getElementById("skillsGrid").innerHTML = SKILLS.map(s => `
   </div>
 `).join("");
 
-// ---------- Project filtering ----------
-const filterBtns = document.querySelectorAll(".filter-btn");
-const cards = document.querySelectorAll(".project-card");
-filterBtns.forEach(btn => {
-  btn.addEventListener("click", () => {
-    filterBtns.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    const filter = btn.dataset.filter;
-    cards.forEach(card => {
-      const tags = card.dataset.tags.split(" ");
-      card.classList.toggle("hidden", filter !== "all" && !tags.includes(filter));
-    });
+// ---------- Terminal boot sequence ----------
+const TERMINAL_SCRIPT = [
+  { type: "cmd", text: "whoami" },
+  { type: "out", text: "brian-bassey — data analyst / software engineer" },
+  { type: "cmd", text: "cat role.txt" },
+  { type: "out", text: "Turning raw data into decisions, and ideas into shipped code." },
+  { type: "cmd", text: "git log -1 --format='%an builds %s'" },
+  { type: "out", text: "brian builds things that don't break in prod." }
+];
+
+const termEl = document.getElementById("terminalBody");
+
+function typeText(el, text, speed) {
+  return new Promise(resolve => {
+    let i = 0;
+    (function tick() {
+      el.textContent = text.slice(0, i);
+      i++;
+      if (i <= text.length) {
+        setTimeout(tick, speed);
+      } else {
+        resolve();
+      }
+    })();
   });
-});
+}
 
-// ---------- Typing effect ----------
-const typedEl = document.getElementById("typedRole");
-let roleIndex = 0, charIndex = 0, deleting = false;
+async function runTerminal() {
+  if (!termEl) return;
+  for (const line of TERMINAL_SCRIPT) {
+    const row = document.createElement("span");
+    row.className = "t-line";
+    termEl.appendChild(row);
 
-function typeLoop() {
-  const current = ROLES[roleIndex];
-  if (!deleting) {
-    charIndex++;
-    typedEl.textContent = current.slice(0, charIndex);
-    if (charIndex === current.length) {
-      deleting = true;
-      setTimeout(typeLoop, 1400);
-      return;
-    }
-  } else {
-    charIndex--;
-    typedEl.textContent = current.slice(0, charIndex);
-    if (charIndex === 0) {
-      deleting = false;
-      roleIndex = (roleIndex + 1) % ROLES.length;
+    if (line.type === "cmd") {
+      const prompt = document.createElement("span");
+      prompt.className = "t-prompt";
+      prompt.textContent = "brian@dev ";
+      const path = document.createElement("span");
+      path.className = "t-path";
+      path.textContent = "~/portfolio $ ";
+      const cmd = document.createElement("span");
+      row.appendChild(prompt);
+      row.appendChild(path);
+      row.appendChild(cmd);
+      await typeText(cmd, line.text, 38);
+      await new Promise(r => setTimeout(r, 250));
+    } else {
+      row.classList.add("t-out");
+      await typeText(row, line.text, 12);
+      await new Promise(r => setTimeout(r, 350));
     }
   }
-  setTimeout(typeLoop, deleting ? 45 : 85);
+  const cursor = document.createElement("span");
+  cursor.className = "term-cursor";
+  termEl.appendChild(cursor);
 }
-typeLoop();
+runTerminal();
+
+// ---------- Matrix rain background ----------
+(function matrixRain() {
+  const canvas = document.getElementById("matrixRain");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  const glyphs = "01{}<>/;=[]()#$%_+-*.";
+  let cols, drops, fontSize = 16;
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    cols = Math.floor(canvas.width / fontSize);
+    drops = new Array(cols).fill(0).map(() => Math.random() * -100);
+  }
+  resize();
+  window.addEventListener("resize", resize, { passive: true });
+
+  function draw() {
+    ctx.fillStyle = "rgba(6,10,15,0.08)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#39ff88";
+    ctx.font = fontSize + "px monospace";
+    for (let i = 0; i < cols; i++) {
+      const glyph = glyphs[Math.floor(Math.random() * glyphs.length)];
+      ctx.fillText(glyph, i * fontSize, drops[i] * fontSize);
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+  setInterval(draw, 55);
+})();
 
 // ---------- Scroll reveal ----------
 const revealEls = document.querySelectorAll(".reveal");
@@ -206,5 +230,22 @@ window.addEventListener("pointermove", (e) => {
   glow.style.setProperty("--y", `${e.clientY}px`);
 }, { passive: true });
 
+// ---------- Graceful fallback for GitHub stat images (public stat APIs occasionally 503) ----------
+document.querySelectorAll("#activityGrid .activity-card").forEach(img => {
+  img.addEventListener("error", () => {
+    img.classList.add("broken");
+    img.nextElementSibling?.classList.add("show");
+  }, { once: true });
+});
+
 // ---------- Footer year ----------
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ---------- Console easter egg for visiting devs ----------
+console.log(
+  "%c> whoami\n%cbrian-bassey — data analyst & software engineer\n\n%c> curious enough to open devtools?\n%clet's talk: brianbassey37@gmail.com · github.com/brianbassey37",
+  "color:#39ff88; font-family:monospace; font-size:13px;",
+  "color:#e8f0ea; font-family:monospace; font-size:13px;",
+  "color:#fbbf24; font-family:monospace; font-size:12px;",
+  "color:#93a5ab; font-family:monospace; font-size:12px;"
+);
