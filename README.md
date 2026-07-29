@@ -9,6 +9,7 @@
 [![Repo size](https://img.shields.io/github/repo-size/brianbassey37/brianbassey37.github.io?color=39ff88&style=flat-square)](https://github.com/brianbassey37/brianbassey37.github.io)
 [![No build step](https://img.shields.io/badge/build%20step-none-39ff88?style=flat-square)](#tech-stack)
 [![Made with HTML CSS JS](https://img.shields.io/badge/made%20with-HTML%20%E2%80%A2%20CSS%20%E2%80%A2%20JS-39ff88?style=flat-square)](#tech-stack)
+[![License](https://img.shields.io/badge/license-all%20rights%20reserved-39ff88?style=flat-square)](LICENSE)
 
 **[brianbassey37.github.io →](https://brianbassey37.github.io/)**
 
@@ -33,6 +34,7 @@ git commit history. No framework, no build step, no dependencies.
 - [Project structure](#project-structure)
 - [Running locally](#running-locally)
 - [Deployment](#deployment)
+- [License](#license)
 - [Contact](#contact)
 
 ## Features
@@ -93,6 +95,12 @@ python -m http.server 8000
 Pushes to `main` deploy automatically via GitHub Pages (source: `main` / root) —
 live at [brianbassey37.github.io](https://brianbassey37.github.io/) within a
 minute or two of every push.
+
+## License
+
+All rights reserved — see [LICENSE](LICENSE). This code is public for
+reference only; it may not be copied, reused, or redistributed without
+permission.
 
 ## Contact
 
