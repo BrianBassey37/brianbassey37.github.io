@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brian Bassey — Data Analyst &amp; Software Engineer</title>
+<meta name="description" content="Portfolio of Brian Bassey — Data Analyst &amp; Software Engineer from Lagos, Nigeria. Python, SQL, Machine Learning, Django, Flask, C.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<header class="nav-wrap">
+  <nav class="nav">
+    <a href="#home" class="logo">BB<span>.</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">👋 Based in Lagos, Nigeria</p>
+      <h1 class="hero-title reveal">
+        I'm <span class="grad-text">Brian Bassey</span><br>
+        <span class="typed-role" id="typedRole"></span><span class="cursor-blink">|</span>
+      </h1>
+      <p class="hero-sub reveal">
+        I turn raw data into decisions and ideas into shipped software —
+        blending analytical rigor with hands-on engineering across Python, SQL,
+        machine learning and full-stack systems.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://github.com/brianbassey37" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="hero-stats reveal" id="heroStats">
+        <div><strong id="statRepos">32</strong><span>Public Repos</span></div>
+        <div><strong id="statFollowers">17</strong><span>Followers</span></div>
+        <div><strong>4+</strong><span>Focus Areas</span></div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <div class="avatar-frame">
+          <img src="https://avatars.githubusercontent.com/u/106796597?v=4" alt="Brian Bassey" loading="lazy">
+        </div>
+        <div class="about-badge">
+          <strong>ALX</strong>
+          <span>Software Engineering Programme</span>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <p class="kicker">About Me</p>
+        <h2>Analytical mind, engineer's hands.</h2>
+        <p>
+          I'm a Data Analyst and Software Engineer who enjoys sitting at the
+          intersection of the two — using data to understand a problem, then
+          writing the software to actually solve it. My background spans
+          machine learning applications, full-stack web projects, and
+          low-level systems programming built through the rigorous ALX
+          Software Engineering programme.
+        </p>
+        <p>
+          Whether it's building a Streamlit app that predicts blood glucose
+          levels, writing a UNIX shell from scratch in C, or shipping a
+          Django-based learning platform, I like projects that force me to
+          understand a system end to end.
+        </p>
+        <div class="about-facts">
+          <div><span>📍</span> Lagos, Nigeria</div>
+          <div><span>🎓</span> ALX Software Engineering</div>
+          <div><span>💼</span> Data Analysis &amp; Software Engineering</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <p class="kicker center reveal">What I Work With</p>
+      <h2 class="center reveal">Skills &amp; Tools</h2>
+      <div class="skills-grid reveal" id="skillsGrid">
+        <!-- injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="kicker center reveal">Selected Work</p>
+      <h2 class="center reveal">Projects</h2>
+      <p class="section-sub center reveal">A mix of applied machine learning, full-stack builds, and systems-level programming — pulled straight from my GitHub.</p>
+
+      <div class="filters reveal" id="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="data">Data &amp; ML</button>
+        <button class="filter-btn" data-filter="web">Web / Full-Stack</button>
+        <button class="filter-btn" data-filter="systems">Systems (C)</button>
+        <button class="filter-btn" data-filter="algorithms">Algorithms</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- injected by JS -->
+      </div>
+
+      <div class="projects-more reveal">
+        <a href="https://github.com/brianbassey37?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">
+          See all repositories →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey" class="section section-alt">
+    <div class="container">
+      <p class="kicker center reveal">How I Got Here</p>
+      <h2 class="center reveal">Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>ALX Software Engineering Programme</h3>
+            <p>Intensive, project-based software engineering training — low-level C
+              programming, data structures &amp; algorithms, shell scripting,
+              and full-stack web development, all built through hands-on projects
+              rather than lectures.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Systems &amp; Algorithms Foundations</h3>
+            <p>Built a UNIX shell, a bytecode interpreter, and core sorting/searching
+              algorithms from scratch in C — the kind of work that forces a real
+              understanding of memory, pointers, and complexity.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Full-Stack &amp; Applied Data Projects</h3>
+            <p>Shipped Flask/Django-backed applications and an ML-powered
+              glucose prediction app, moving from raw data to deployed,
+              user-facing tools.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Today</h3>
+            <p>Continuing to build, break, and rebuild — open to Data Analyst
+              and Software Engineering roles where I can do both.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact-section">
+    <div class="container contact-inner">
+      <p class="kicker center reveal">Get In Touch</p>
+      <h2 class="center reveal">Let's build something.</h2>
+      <p class="section-sub center reveal">
+        Open to Data Analyst and Software Engineering opportunities,
+        collaborations, or just a good technical conversation.
+      </p>
+      <div class="contact-links reveal">
+        <a href="https://github.com/brianbassey37" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 16 16" width="22" height="22" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          <span>github.com/brianbassey37</span>
+        </a>
+        <a href="mailto:brianbassey37@gmail.com" class="contact-card">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke="none"/><path d="M4 4h16v16H4V4Zm0 0 8 8 8-8"/></svg>
+          <span>brianbassey37@gmail.com</span>
+        </a>
+        <div class="contact-card contact-static">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          <span>Lagos, Nigeria</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Brian Bassey. Built with plain HTML, CSS &amp; JS — hosted on GitHub Pages.</p>
+    <a href="#home" class="back-top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
