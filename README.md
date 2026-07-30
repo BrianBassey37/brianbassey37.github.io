@@ -64,7 +64,7 @@ git commit history. No framework, no build step, no dependencies.
 | Behavior  | Vanilla JavaScript — no build tools, no dependencies           |
 | Fonts     | [JetBrains Mono](https://www.jetbrains.com/lp/mono/), [Inter](https://rsms.me/inter/) via Google Fonts |
 | Hosting   | [GitHub Pages](https://pages.github.com/)                     |
-| Live data | [github-readme-stats](https://github.com/anuraghazra/github-readme-stats), [github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats), [ghchart](https://github.com/2016rshah/githubchart-api) |
+| Live data | [lowlighter/metrics](https://github.com/lowlighter/metrics) (self-hosted via GitHub Actions, see `.github/workflows/metrics.yml`), [github-readme-streak-stats](https://github.com/DenverCoder1/github-readme-streak-stats), [ghchart](https://github.com/2016rshah/githubchart-api) |
 
 ## Project structure
 
@@ -76,6 +76,10 @@ git commit history. No framework, no build step, no dependencies.
 │   └── script.js                # Project/skill data, rendering, terminal + matrix-rain effects
 ├── docs/
 │   └── screenshots/             # README preview images
+├── .github/workflows/
+│   └── metrics.yml              # Regenerates metrics.svg / metrics-languages.svg on a schedule
+├── metrics.svg                 # Generated GitHub stats card (committed by the workflow above)
+├── metrics-languages.svg        # Generated top-languages card (committed by the workflow above)
 └── README.md
 ```
 

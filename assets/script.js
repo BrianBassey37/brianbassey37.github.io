@@ -80,7 +80,9 @@ grid.innerHTML = PROJECTS.map(p => `
         ? `<a href="${p.site}" target="_blank" rel="noopener">visit site →</a>`
         : p.private
           ? `<a href="mailto:brianbassey37@gmail.com?subject=${encodeURIComponent('Re: ' + p.name)}">ask me about it →</a>`
-          : `<a href="${p.url}" target="_blank" rel="noopener">view-source →</a>`
+          : p.url
+            ? `<a href="${p.url}" target="_blank" rel="noopener">view-source →</a>`
+            : ""
       }
     </div>
   </article>
